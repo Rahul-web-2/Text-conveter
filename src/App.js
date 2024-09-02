@@ -3,7 +3,7 @@ import TextConvert from './Components/TextConvert';
 import Alert from './Components/Alert';
 import About from './Components/About';
 import { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Form from './Components/form';
 //import './App.css';
 
@@ -37,22 +37,24 @@ export default function App() {
   return (
     <>
       <Router>
-
-        <Navbar title="Text Converter" mode={mode} toggleMode={toggleMode} />
+<Navbar title="Text Converter" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className='container'>
+            
+            
+            
+<Routes>
 
-          <Route exact path="/">
-            <TextConvert showAlert={showAlert} heading="Enter the Text" mode={mode} />
+          <Route exact path="/" element={<TextConvert showAlert={showAlert} heading="Enter the Text" mode={mode} />}>
           </Route>
-          <Route exact path="/form">
-            <Form />
+          <Route exact path="/form" element={<Form />} >
           </Route>
-          <Route exact path="/about">
-            <About mode={mode} />
+          <Route exact path="/about" element={<About mode={mode} />}>
           </Route>
 
+</Routes>
         </div>
+       
       </Router>
     </>
   );
