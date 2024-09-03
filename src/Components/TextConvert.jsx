@@ -45,7 +45,7 @@ export default function TextConvert(props) {
                 <p> {text.length>0 ? text.trim().split(" ").length : 0} words and {text.length} characters </p>
             </div>
 
-            <Span>MORE FUNCTION ARE UNDER WORK.😃</Span>
+            <h1>MORE FUNCTION ARE UNDER WORK.😃</h1>
         </>
     );
 }
