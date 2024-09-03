@@ -1,9 +1,9 @@
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './Components/navbar';
 import TextConvert from './Components/TextConvert';
 import Alert from './Components/Alert';
 import About from './Components/About';
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Form from './Components/form';
 //import './App.css';
 
