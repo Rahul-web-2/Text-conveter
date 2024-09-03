@@ -45,7 +45,7 @@ export default function TextConvert(props) {
                 <p> {text.length>0 ? text.trim().split(" ").length : 0} words and {text.length} characters </p>
             </div>
 
-            <h1>MORE FUNCTION ARE UNDER WORK.😃</h1>
+            <h1 style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>MORE FUNCTION ARE UNDER WORK.😃</h1>
         </>
     );
 }
