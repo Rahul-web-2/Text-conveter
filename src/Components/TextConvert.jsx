@@ -20,6 +20,12 @@ export default function TextConvert(props) {
         props.showAlert(" : Converted to LowerCsae", "success")
     }
 
+    const handleSc = () => {
+    let newText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+        setText(newText)
+        props.showAlert(" : Converted to  Sentence Case", "success")
+    }
+
     const handleRe = () => {
         setText("")
         props.showAlert(" : Textarea is Reset", "success")
@@ -39,6 +45,7 @@ export default function TextConvert(props) {
             </div>
             <button disabled={text.length===0} className="btn btn-primary" onClick={handleUp}>Uppercase</button>
             <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleLo}>Lowercase</button>
+            <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleSc}>Sentence Case</button>
             <button disabled={text.length===0} className="btn btn-primary" onClick={handleRe}>Reset</button>
             <div className='container' style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                 <h2>Your text summary</h2>
